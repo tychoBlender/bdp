@@ -1,0 +1,139 @@
+/*
+Theme Name: Black Dot Project 2012
+Theme URI: Awesomee Sauce Blowin Your Mind Sauce
+Description: 
+Author: Danny Castillo &  Chris Cromwell
+Author URI: twitter.com/blackdotproject
+*/
+
+/*---- Index Styles ---*/
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('assets/bebas___-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('bebasneue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p
+{
+	font-family: Times,serif;
+	font-size: medium;
+}
+
+html
+{
+	background-color:#E5E5E5;
+}
+
+body
+{
+
+}
+
+.wrapper
+{
+ 
+}
+
+/*---- Header Styles ---*/
+#header
+{
+	position:relative;
+	background-color:#F2F2F2;
+	height:150px;
+	width:100%;
+	margin:10px;
+}
+
+#logowrap
+{
+	width:564px;
+	position:relative;
+	padding-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#content
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1
+{
+	font-size:2em;
+}
+
+#tagline
+{
+	color:red;	
+}
+
+/*---- Sidebar Styles ---*/
+#sidebar h2
+{
+	font-size:14px;
+	font-weight:normal;
+}
+
+#sidebar ul li
+{
+	font-size:14px;
+	font-weight:normal;
+	list-style-type:none;
+	margin-left:0px;
+}
+
+
+/*---- Comment Styles ---*/
+
+div .comment
+{
+	
+}
+
+div .comment-author
+{
+	color:blue;
+}
+
+img.avatar
+{
+	border:1px dotted green;
+}
+
+cite.fn
+{
+	font-family: arial, sans-serif;
+}
+
+div .comment-meta
+{
+	
+}
+
+div .comment p
+{
+	font-size:12px;
+	line-height: 18px;
+	color:green;
+}
+	
+/*---- Footer Styles ---*/
+#footer
+{
+	clear:both;
+	margin:auto;
+	text-align:center;
+}
