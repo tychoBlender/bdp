@@ -5,8 +5,80 @@ Description:
 Author: Danny Castillo &  Chris Cromwell
 Author URI: twitter.com/blackdotproject
 */
+/*-------------------------------------------------------------------------------------------*/
+/* RESET */
+/*-------------------------------------------------------------------------------------------*/
 
-/*---- Index Styles ---*/
+/* http://meyerweb.com/eric/tools/css/reset/ | v1.0 | 20080212 */
+
+body, html  { height: 100%; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }/* remember to define focus styles! */
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cellspacing="0"' in the markup */
+
+/*-------------------------------------------------------------------------------------------*/
+/* GENERAL STYLES */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Floating & Alignment */
+.fl{float: left;}
+.fr{float: right;}
+.ac{text-align: center;}
+.ar{text-align: right;}
+
+/* Clear Floats */
+.col-full:after{content: "."; display: block;height: 0;clear: both; visibility: hidden;}
+
+.fix{clear: both;height: 1px;margin: -1px 0 0;overflow: hidden;}
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear
+{
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}/* http://sonspring.com/journal/clearing-floats */
+
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+
+/*---- Base Styles ---*/
 @font-face {
     font-family: 'BebasRegular';
     src: url('assets/bebas___-webfont.ttf') format('truetype');
@@ -34,15 +106,6 @@ html
 	background-color:#E5E5E5;
 }
 
-body
-{
-
-}
-
-.wrapper
-{
- 
-}
 
 /*---- Header Styles ---*/
 #header
@@ -51,35 +114,205 @@ body
 	background-color:#F2F2F2;
 	height:150px;
 	width:100%;
-	margin:10px;
 }
 
-#logowrap
+#social
+{
+	margin-top:25px;
+	height:35px;
+	width:130px;
+	float:right;
+}
+
+#social a
+{
+	float:left;
+	width:35px;
+	margin-right:8px;
+}
+
+a#facebook
+{
+	height:35px;
+	width:35px;
+	background-image:url("assets/social_buttons.png");
+}
+
+a:link#facebook 
+{
+	text-decoration:none;
+	color:black;
+}
+
+a:visited#facebook 
+{
+	text-decoration:none;
+	color:black;
+}
+
+a:hover#facebook 
+{
+	text-decoration:underline;
+	background-position: 0 -36px;
+}
+
+
+a:link#twitter
+{
+	height:36px;
+	width:36px;
+	background-image:url("assets/social_buttons.png");
+	background-position: -43px 0px;
+}
+
+a:hover#twitter
+{
+	background-position: -43px -36px;
+}
+
+a:link#rss
+{
+	height:35px;
+	width:35px;
+	background-image:url("assets/social_buttons.png");
+	background-position: -89px 0;
+	background-repeat:no-repeat;
+	margin-right:0;
+}
+
+a:hover#rss
+{
+	background-position: -89px -36px;
+}
+
+
+.logo
 {
 	width:564px;
-	position:relative;
-	padding-top:15px;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:10px;
+}
+
+/*---- Navigation Styles ---*/
+#lWrap
+{
+	border-top:solid 1px black;
+	width:100%;
+}
+#lNav
+{
+	width:500px;
+	height:50px;
+	margin-top:10px;
+	margin-right:auto;
+	margin-bottom:10px;
+	margin-left:auto;
+	padding: 0 5% 0 5%;
+}
+
+.page_item
+{
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size:2em;
+	list-style-type:none;
+	float:left;
+	margin-top:10px;
+	margin-right:10px;
+}
+
+.page_item a:link
+{
+	text-decoration:none;
+	color:black;
+}
+
+.page_item a:visited
+{
+	color:black;
+
+}
+
+.page_item a:active
+{
+	color:red;
+
+}
+
+
+.page_item a:hover
+{
+	color:green;
 }
 
 
 #content
 {
-	margin-left: auto;
+	background-color:#FFF;
+	padding-top:25px;
+}
+
+#content div
+{
+	width:95%; 
+}
+
+
+.post
+{
+	margin-bottom:25px;
+}
+
+.postHeader
+{
+	min-width:320px;
+	max-width:960px;
+	margin-top:25px;
+	height:65px;
 	margin-right: auto;
+	margin-left: auto; 
+	padding: 5px 0 5px 0;
+	background-color:#f5f4f3;
 }
 
-h1
+.postTitle
 {
+	font-family:'BebasRegular';
 	font-size:2em;
+	text-align:center;
+	margin-top:10px;
 }
 
-#tagline
+.postTitle a:link
 {
-	color:red;	
+	text-decoration:none;
+	color:#393635;
 }
 
+.postTitle a:hover
+{
+	color:#262525;
+}
+
+.postDate
+{
+	font-family:'Baskerville';
+	float:right;
+	padding-right:10px;
+}
+
+.entry
+{
+	width:576px;
+	margin: 20px auto 0 auto;
+}
+
+.entry p
+{
+	font-family:Times;
+	font-size:1em;
+	line-height:1.75em;
+}
 /*---- Sidebar Styles ---*/
 #sidebar h2
 {
@@ -129,11 +362,54 @@ div .comment p
 	line-height: 18px;
 	color:green;
 }
-	
+
+/*---- Form Styles ---*/
+.wpcf7-form-control-wrap input:focus
+{
+
+	background:#b1b8be;
+	color:#fff;
+}
+
+.formText
+{
+	font-family:'BebasRegular';
+	font-size:2em;
+}
+
+
 /*---- Footer Styles ---*/
 #footer
 {
 	clear:both;
 	margin:auto;
 	text-align:center;
+}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body 
+	{
+		font-family: serif;
+		color:green;	
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
 }
